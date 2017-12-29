@@ -8,6 +8,7 @@
     padding-left: 15px;
     padding-right: 15px;
     background-color: #ECD9AF;
+    border:groove #D7B468 5px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -24,6 +25,20 @@ textarea {
     max-width: 280px;
 }
 
+.heading {
+    background-image: url('AevumBG.png');
+
+}
+
+                                                                                                                                                        /*BUTTONS*/
+.bigButton {
+    font-size: 24px;
+    padding: 5px 10px 5px 10px;
+    background-color: #ECD9AF;
+    border: groove #D7B468 2px;
+}
+
 /*COLORS light brown #ECD9AF medium brown #D7B468 dark brown #471512*/
 /*FONT COLORS deep red brown #802A1F blue #4C5C84 yellow #F7BD38*/
+/*FONTS aevum= font-family: 'Fondamento', cursive; body= font-family: 'Vollkorn SC', serif;*/
 /*https://upload.wikimedia.org/wikipedia/commons/3/36/Benedetto_Bordon_-_Leaf_from_Breviary_-_Walters_W3331V_-_Open_Reverse.jpg*/
