@@ -159,10 +159,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Aevum.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Aevum.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aevum.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Aevum.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Aevum.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>Aevum.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>Aevum.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Work.cs">
+      <DependentUpon>Aevum.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -176,7 +190,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\Aevum.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Aevum.edmx</DependentUpon>
       <LastGenOutput>Aevum.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Aevum.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Aevum.edmx</DependentUpon>
+      <LastGenOutput>Aevum.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -187,9 +207,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Aevum.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\Aevum.edmx.diagram">
+    <Content Include="Models\Aevum.edmx.diagram">
       <DependentUpon>Aevum.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -231,6 +251,9 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

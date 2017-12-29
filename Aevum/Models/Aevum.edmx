@@ -113,7 +113,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AevumEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AevumEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Works" EntityType="Self.Work" />
@@ -127,7 +127,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AevumModelStoreContainer" CdmEntityContainer="AevumEntities">
+        <EntityContainerMapping StorageEntityContainer="AevumModelStoreContainer" CdmEntityContainer="AevumEntities1">
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="AevumModel.Category">
               <MappingFragment StoreEntitySet="Category">
