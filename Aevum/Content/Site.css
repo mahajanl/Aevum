@@ -27,15 +27,28 @@ textarea {
 
 .heading {
     background-image: url('AevumBG.png');
-
+    padding: 15px 15px 15px 15px;
 }
 
-                                                                                                                                                        /*BUTTONS*/
+.aevumContainer {
+    background-color: rgba(236,217,175,.5);
+
+}
+.headingAevum {
+    font-family: 'Fondamento', cursive;
+    font-size: 96px;
+    color: #802A1F;
+}
+/*BUTTONS*/
 .bigButton {
-    font-size: 24px;
+    font-size: 36px;
+    font-family: 'Vollkorn SC', serif;  
     padding: 5px 10px 5px 10px;
     background-color: #ECD9AF;
-    border: groove #D7B468 2px;
+    border: groove #D7B468 3px;
+}
+.indexBody {
+    font-family: 'Vollkorn SC', serif;
 }
 
 /*COLORS light brown #ECD9AF medium brown #D7B468 dark brown #471512*/
