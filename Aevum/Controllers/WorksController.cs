@@ -15,12 +15,24 @@ namespace Aevum.Controllers
         private AevumEntities1 db = new AevumEntities1();
 
         // GET: Works
-        public ActionResult Index()
-        {
-            var works = db.Works.Include(w => w.Category1);
-            return View(works.ToList());
-        }
+        //public ActionResult Index()
+        //{
+        //    var works = db.Works.Include(w => w.Category1);
+        //    return View(works.ToList());
+        //}
 
+        public ActionResult Index(string sortOrder, string searchString)
+        {
+            var titles = from title in db.Works
+                        select title;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                titles = titles.Where(title => title.WorkTitle.Contains(searchString));
+            }
+
+            return View(titles.ToList());
+        }
         // GET: Works/Details/5
         public ActionResult Details(int? id)
         {

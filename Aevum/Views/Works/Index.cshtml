@@ -9,6 +9,69 @@
 <p>
     @Html.ActionLink("Add Work", "Create")
 </p>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <p>
+            Find by name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+    }
+</div>
+
+
+@foreach (var item in Model)
+{
+    <div class="container works">
+        <div class="informationDisplay row">
+            <div class="col-md-2">
+                <h2>@Html.DisplayFor(modelItem => item.Date)</h2>
+            </div>
+            <div class="col-md-5">
+                <h2>@Html.DisplayFor(modelItem => item.WorkTitle)</h2>
+            </div>
+            <div class="col-md-5">
+                <h2>@Html.DisplayFor(modelItem => item.AuthorName) @Html.DisplayFor(modelItem => item.AuthorSurName)</h2>
+            </div>
+        </div>
+    </div>
+
+    <button href="~/Works/Details)">Details</button>
+@Html.ActionLink("Edit Entry", "Edit", new { id = item.WorkID }) 
+@Html.ActionLink("Details", "Details", new { id = item.WorkID })
+
+    @*@*<div class="row">
+        <div class="col-md-2">
+            <p>@Html.DisplayFor(modelItem => item.Category1.CategoryName)</p>
+        </div>
+        <div class="col-md-5">
+            <p>@Html.DisplayFor(modelItem => item.ManuscriptType)</p>
+        </div>
+        <div class="col-md-5">
+            <p>@Html.DisplayFor(modelItem => item.LocationFound)</p>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-2">
+                <p>@Html.DisplayFor(modelItem => item.LocationWritten)</p>
+            </div>
+        </div>
+
+        <a href="@Url.Action("Index", "MedProes")" role="button" class="bigButton">Medical Professionals Index</a>
+        *@
+
+
+
+            @*THIS SHOULD BE IN A MODAL BOX @Html.DisplayFor(modelItem => item.WorkDescription)*@
+
+            @*@Html.DisplayFor(modelItem => item.CurrentLocation)
+
+            @Html.DisplayFor(modelItem => item.NotesOnWork)*@
+    
+            
+
+
 @*<table class="table">
     <tr>
         <th>
@@ -46,48 +109,6 @@
         </th>
         <th></th>
     </tr>*@
-
-@foreach (var item in Model) {
-    <div class="container works">
-        <div class="informationDisplay row">
-            <div class="col-md-2">
-                <h2>@Html.DisplayFor(modelItem => item.Date)</h2>
-            </div>
-            <div class="col-md-5">
-                <h2>@Html.DisplayFor(modelItem => item.WorkTitle)</h2>
-            </div>
-            <div class="col-md-5">
-                <h2>@Html.DisplayFor(modelItem => item.AuthorName) @Html.DisplayFor(modelItem => item.AuthorSurName)</h2>
-            </div>
-        </div>
-        <div class="row">
-                <div class="col-md-2">
-                    <p>@Html.DisplayFor(modelItem => item.Category1.CategoryName)</p>
-                </div>
-                <div class="col-md-5">
-                    <p>@Html.DisplayFor(modelItem => item.ManuscriptType)</p>
-                </div>
-            <div class="col-md-5">
-                <p>@Html.DisplayFor(modelItem => item.LocationFound)</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <p>@Html.DisplayFor(modelItem => item.LocationWritten)</p>
-            </div>
-         </div>
-    </div>
-   
-            @*THIS SHOULD BE IN A MODAL BOX @Html.DisplayFor(modelItem => item.WorkDescription)*@
-        
-            @Html.DisplayFor(modelItem => item.CurrentLocation)
-       
-            @Html.DisplayFor(modelItem => item.NotesOnWork)
-       
-            
-       
-            @Html.ActionLink("Edit", "Edit", new { id=item.WorkID }) @Html.ActionLink("Details", "Details", new { id=item.WorkID }) @Html.ActionLink("Delete", "Delete", new { id=item.WorkID })
-   
 }
 
 
