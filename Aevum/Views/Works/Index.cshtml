@@ -48,38 +48,46 @@
     </tr>*@
 
 @foreach (var item in Model) {
-    <div>
-        <div class="row">
+    <div class="container works">
+        <div class="informationDisplay row">
             <div class="col-md-2">
                 <h2>@Html.DisplayFor(modelItem => item.Date)</h2>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-5">
                 <h2>@Html.DisplayFor(modelItem => item.WorkTitle)</h2>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-5">
                 <h2>@Html.DisplayFor(modelItem => item.AuthorName) @Html.DisplayFor(modelItem => item.AuthorSurName)</h2>
             </div>
         </div>
-
+        <div class="row">
+                <div class="col-md-2">
+                    <p>@Html.DisplayFor(modelItem => item.Category1.CategoryName)</p>
+                </div>
+                <div class="col-md-5">
+                    <p>@Html.DisplayFor(modelItem => item.ManuscriptType)</p>
+                </div>
+            <div class="col-md-5">
+                <p>@Html.DisplayFor(modelItem => item.LocationFound)</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <p>@Html.DisplayFor(modelItem => item.LocationWritten)</p>
+            </div>
+         </div>
     </div>
-            
-       
+   
             @*THIS SHOULD BE IN A MODAL BOX @Html.DisplayFor(modelItem => item.WorkDescription)*@
         
-            @Html.DisplayFor(modelItem => item.ManuscriptType)
-       
-            @Html.DisplayFor(modelItem => item.LocationWritten)
-       
-            @Html.DisplayFor(modelItem => item.LocationFound)
-       
             @Html.DisplayFor(modelItem => item.CurrentLocation)
        
             @Html.DisplayFor(modelItem => item.NotesOnWork)
        
-            @Html.DisplayFor(modelItem => item.Category1.CategoryName)
+            
        
             @Html.ActionLink("Edit", "Edit", new { id=item.WorkID }) @Html.ActionLink("Details", "Details", new { id=item.WorkID }) @Html.ActionLink("Delete", "Delete", new { id=item.WorkID })
    
 }
 
-</table>
+
