@@ -4,12 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Index of Works</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add Work", "Create")
 </p>
-<table class="table">
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Date)
@@ -45,49 +45,41 @@
             @Html.DisplayNameFor(model => model.Category1.CategoryName)
         </th>
         <th></th>
-    </tr>
+    </tr>*@
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WorkTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AuthorName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AuthorSurName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WorkDescription)
-        </td>
-        <td>
+    <div>
+        <div class="row">
+            <div class="col-md-2">
+                <h2>@Html.DisplayFor(modelItem => item.Date)</h2>
+            </div>
+            <div class="col-md-3">
+                <h2>@Html.DisplayFor(modelItem => item.WorkTitle)</h2>
+            </div>
+            <div class="col-md-3">
+                <h2>@Html.DisplayFor(modelItem => item.AuthorName) @Html.DisplayFor(modelItem => item.AuthorSurName)</h2>
+            </div>
+        </div>
+
+    </div>
+            
+       
+            @*THIS SHOULD BE IN A MODAL BOX @Html.DisplayFor(modelItem => item.WorkDescription)*@
+        
             @Html.DisplayFor(modelItem => item.ManuscriptType)
-        </td>
-        <td>
+       
             @Html.DisplayFor(modelItem => item.LocationWritten)
-        </td>
-        <td>
+       
             @Html.DisplayFor(modelItem => item.LocationFound)
-        </td>
-        <td>
+       
             @Html.DisplayFor(modelItem => item.CurrentLocation)
-        </td>
-        <td>
+       
             @Html.DisplayFor(modelItem => item.NotesOnWork)
-        </td>
-        <td>
+       
             @Html.DisplayFor(modelItem => item.Category1.CategoryName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.WorkID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.WorkID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.WorkID })
-        </td>
-    </tr>
+       
+            @Html.ActionLink("Edit", "Edit", new { id=item.WorkID }) @Html.ActionLink("Details", "Details", new { id=item.WorkID }) @Html.ActionLink("Delete", "Delete", new { id=item.WorkID })
+   
 }
 
 </table>
