@@ -36,21 +36,44 @@ textarea {
 }
 .headingAevum {
     font-family: 'Fondamento', cursive;
-    font-size: 96px;
+    font-size: 108px;
     color: #802A1F;
+    text-align: center;
+}
+.lead {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 24px;
+    text-align: center;
 }
 /*BUTTONS*/
 .bigButton {
-    font-size: 36px;
+    font-size: 48px;
     font-family: 'Vollkorn SC', serif;  
     padding: 5px 10px 5px 10px;
     background-color: #ECD9AF;
     border: groove #D7B468 3px;
+    display: block;
+    margin: auto;
+}
+.letterButton {
+    font-family: 'Fondamento', cursive;
+    font-size: 40px;
+    background-color: #ECD9AF;
+    border: groove #4C5C84 3px;
 }
 .indexBody {
     font-family: 'Vollkorn SC', serif;
+    padding: 10px 25px 0px 25px;
+    margin-bottom: 0px;
+    font-size: 28px;
+    margin-top: 32px;
 }
-
+.indexBlurb {
+    font-family: 'Vollkorn SC', serif;
+    padding: 0px 25px 10px 70px;
+    font-size: 18px;
+    margin-top: 0px;
+}
 informationDisplay
 
 /*COLORS light brown #ECD9AF medium brown #D7B468 dark brown #471512*/

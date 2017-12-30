@@ -5,31 +5,31 @@
 <div class="container heading">
     <div class="container aevumContainer">
         <h1 class="headingAevum">Aevum Rhetorica</h1>
-        <p class="lead">A visual representation of rhetorical works through the ages.</p>
-        <p><button class="bigButton">The Timeline</button></p>
+        <p class="lead">A visual representation of rhetorical works through the ages</p>
+        <p><a href="@Url.Action("Index","Works")" role="button"class="bigButton">The Timeline</a></p>
     </div>
 </div>
-
-<div class="container-fluid indexBody">
+<a role="button" class="button"href="~Works/Index">To Works</a>
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
-            <h2>Authors</h2>
-            <p>All of the authors in the Aevum Timeline, searchable by Title, and Date</p>
-            <p><button class="medButton"href="/AllWorks">List of Works</button></p>
+            <p class="indexBody"><button href="~/Works/Index"class="letterButton">A</button>dditional Resources</p>
+            <p class="indexBlurb">Links and descriptions to and of external resources that may be helpful.</p>
         </div>
         <div class="col-md-6">
-            <h2>Resources for Medievalists</h2>
-            <p><button class="medButton" href="/Resources">Related Projects</button></p>
+            <p class="indexBody"><button class="letterButton" href="/Works/Index">A</button>uthors</p>
+            <p class="indexBlurb">All of the authors in the Aevum Timeline, searchable by Title, and Date.</p>
+            <p></p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <h2>About the Creators</h2>
-            <p><button class="medButton" href="/AboutUs">About the People</button></p>
+            <p class="indexBody"><button class="letterButton" href="/AboutUs">A</button>bout the Creators</p>
+            <p class="indexBlurb">The people behind the modern Aevum</p>
         </div>
         <div class="col-md-6">
-            <h2>Contact Us</h2>
-            <p><button class="medButton" href="/Contact">Give Feedback</button></p>
+            <p class="indexBody"><button class="letterButton" href="/Contact">C</button>ontact Us</p>
+            <p class="indexBlurb">Let us know if you have questions or feedback on the project</p>
         </div>
     </div>
 </div>
