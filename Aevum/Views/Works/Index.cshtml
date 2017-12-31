@@ -4,9 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<p class="headingAevum">Timeline</p>
-<p>and</p>
-<h2>Index of Works</h2>
+<h2 class="lead">Index of Works</h2>
 
 <p>
     @Html.ActionLink("Add Work", "Create")
@@ -16,16 +14,18 @@
     @using (Html.BeginForm())
     {
         <p>
-            Find by name: @Html.TextBox("SearchString")
+            @Html.RadioButton("Search", "Title", true)<span>Find by Work Title</span>
+            @Html.RadioButton("Search", "Name")<span>Find by Author</span>
+            @Html.RadioButton("Search", "Name")<span>Find by Date</span>
+             @Html.TextBox("SearchString")
             <input type="submit" value="Search" />
         </p>
     }
 </div>
 
-
 @foreach (var item in Model)
 {
-    <div class="container works">
+    <div class="container work">
         <div class="informationDisplay row">
             <div class="col-md-2">
                 <h2>@Html.DisplayFor(modelItem => item.Date)</h2>

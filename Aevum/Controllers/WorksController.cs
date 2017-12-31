@@ -21,18 +21,34 @@ namespace Aevum.Controllers
         //    return View(works.ToList());
         //}
 
-        public ActionResult Index(string sortOrder, string searchString)
+        public ActionResult Index(string Search, string searchString)
         {
             var titles = from title in db.Works
-                        select title;
-
+                         select title;
+            
             if (!String.IsNullOrEmpty(searchString))
             {
-                titles = titles.Where(title => title.WorkTitle.Contains(searchString));
+                if (Search == "Title")
+                {
+                    titles = titles.Where(title => title.WorkTitle.Contains(searchString));
+                }
+                else if (Search == "Name")
+                {
+                    titles = titles.Where(title => title.AuthorName.Contains(searchString));
+                }
+                else if (Search == "Date")
+                {
+                    titles = titles.Where(title => title.Date.Contains(searchString));
+                }
             }
 
+            
             return View(titles.ToList());
+            
         }
+
+
+
         // GET: Works/Details/5
         public ActionResult Details(int? id)
         {

@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #D7B468;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -32,7 +33,7 @@ textarea {
 
 .aevumContainer {
     background-color: rgba(236,217,175,.7);
-
+    margin-bottom:20px;
 }
 .headingAevum {
     font-family: 'Fondamento', cursive;
@@ -53,9 +54,18 @@ textarea {
     background-color: #ECD9AF;
     border: groove #D7B468 3px;
     text-align:center;
-    margin: auto;
-    
+    margin-top: 15px;
 }
+ a{
+    color: black;
+}
+a:link {
+    color: black;
+}
+    a:hover {
+        background-color: #D7B468;
+        color:black;
+    }
 .letterButton {
     font-family: 'Fondamento', cursive;
     font-size: 40px;
@@ -75,7 +85,12 @@ textarea {
     font-size: 18px;
     margin-top: 0px;
 }
-informationDisplay
+.work {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 24px;
+    background-color: #D7B468;
+    border: 2px inset #802A1F 
+}
 
 /*COLORS light brown #ECD9AF medium brown #D7B468 dark brown #471512*/
 /*FONT COLORS deep red brown #802A1F blue #4C5C84 yellow #F7BD38*/
