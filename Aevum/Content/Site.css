@@ -89,7 +89,14 @@ a:link {
     font-family: 'Vollkorn SC', serif;
     font-size: 24px;
     background-color: #D7B468;
-    border: 2px inset #802A1F 
+    border: 2px inset #802A1F; 
+    margin: 0px 40px 10px 0px;
+}
+.search {
+    font-family: 'Vollkorn SC', serif;
+    font-size:18px;
+    background-color: #D7B468;
+    border: 2px inset #802A1F;
 }
 
 /*COLORS light brown #ECD9AF medium brown #D7B468 dark brown #471512*/

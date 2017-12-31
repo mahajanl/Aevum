@@ -38,7 +38,7 @@ namespace Aevum.Controllers
                 }
                 else if (Search == "Date")
                 {
-                    titles = titles.Where(title => title.Date.Contains(searchString));
+                    titles = titles.Where(title => title.Date.ToString().Contains(searchString));
                 }
             }
 
