@@ -52,8 +52,9 @@ textarea {
     padding: 5px 10px 5px 10px;
     background-color: #ECD9AF;
     border: groove #D7B468 3px;
-    display: block;
+    text-align:center;
     margin: auto;
+    
 }
 .letterButton {
     font-family: 'Fondamento', cursive;

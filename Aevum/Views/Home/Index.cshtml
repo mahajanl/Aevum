@@ -2,14 +2,14 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="container heading">
-    <div class="container aevumContainer">
+<div class="container-fluid heading">
+    <div class="container-fluid aevumContainer text-center">
         <h1 class="headingAevum">Aevum Rhetorica</h1>
         <p class="lead">A visual representation of rhetorical works through the ages</p>
         <p><a href="@Url.Action("Index","Works")" role="button"class="bigButton">The Timeline</a></p>
     </div>
 </div>
-<a role="button" class="button"href="~Works/Index">To Works</a>
+@*<a class="button" href="~/Works/Index" role="button">Learn more</a>*@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
