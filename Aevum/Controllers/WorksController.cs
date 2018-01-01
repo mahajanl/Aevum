@@ -42,8 +42,7 @@ namespace Aevum.Controllers
                 }
             }
 
-            
-            return View(titles.ToList());
+            return View(titles.ToList().OrderBy(o=>o.Date));
             
         }
 
