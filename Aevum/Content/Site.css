@@ -25,16 +25,22 @@ select,
 textarea {
     max-width: 280px;
 }
-.navbar-fixed-top,
-.navbar-header,
-.nav.navbar-nav li,
-.nav,
-.navbar a,
-.navbar-collapse, 
-.collapse {
+
+.navbar.navbar-fixed-top {
     background-color: #802A1F;
-    color: #F7BD38;
+    color: #ECD9AF;
+    font-family: 'Vollkorn SC', serif;
 }
+.navbar.navbar-fixed-top a{
+    background-color: #802A1F;
+    color: #ECD9AF;
+}
+
+    .navbar.navbar-fixed-top a:hover {
+        background-color: #4C5C84;
+        color: #ECD9AF;
+    }
+
 .heading {
     background-image: url('AevumBG.png');
     padding: 15px 15px 15px 15px;
