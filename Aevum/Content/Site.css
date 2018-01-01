@@ -37,8 +37,8 @@ textarea {
 }
 
     .navbar.navbar-fixed-top a:hover {
-        background-color: #4C5C84;
-        color: #ECD9AF;
+        background-color: #ECD9AF;
+        color: #802A1F;
     }
 
 .heading {
@@ -84,10 +84,12 @@ a:link {
     }
 .letterButton {
     font-family: 'Fondamento', cursive;
-    font-size: 40px;
+    font-size: 44px;
     background-color: #ECD9AF;
     border: groove #4C5C84 3px;
     color: black;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .smallButton {
     font-family: 'Vollkorn SC', serif;
@@ -102,14 +104,14 @@ a:link {
     font-family: 'Vollkorn SC', serif;
     padding: 10px 25px 0px 25px;
     margin-bottom: 0px;
-    font-size: 28px;
+    font-size: 32px;
     margin-top: 32px;
     color: black;
 }
 .indexBlurb {
     font-family: 'Vollkorn SC', serif;
     padding: 0px 25px 10px 70px;
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 0px;
 }
 .work {
