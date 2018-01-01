@@ -45,6 +45,7 @@ textarea {
     font-family: 'Vollkorn SC', serif;
     font-size: 24px;
     text-align: center;
+    color: black;
 }
 /*BUTTONS*/
 .bigButton {
@@ -71,6 +72,16 @@ a:link {
     font-size: 40px;
     background-color: #ECD9AF;
     border: groove #4C5C84 3px;
+    color: black;
+}
+.smallButton {
+    font-family: 'Vollkorn SC', serif;
+    color: black;
+    border: none;
+    font-size:20px;
+    text-align: center;
+    display: block;
+    margin: auto;
 }
 .indexBody {
     font-family: 'Vollkorn SC', serif;
@@ -78,6 +89,7 @@ a:link {
     margin-bottom: 0px;
     font-size: 28px;
     margin-top: 32px;
+    color: black;
 }
 .indexBlurb {
     font-family: 'Vollkorn SC', serif;
@@ -97,6 +109,9 @@ a:link {
     font-size:18px;
     background-color: #D7B468;
     border: 2px inset #802A1F;
+}
+.editDetails{
+    margin-bottom: 15px;
 }
 
 /*COLORS light brown #ECD9AF medium brown #D7B468 dark brown #471512*/

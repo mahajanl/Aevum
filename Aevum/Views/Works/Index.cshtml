@@ -39,10 +39,11 @@
                 </div>
             </div>
         </div>
-
-        <button href="~/Works/Details)">Details</button>
-        @Html.ActionLink("Edit Entry", "Edit", new { id = item.WorkID })
-        @Html.ActionLink("Details", "Details", new { id = item.WorkID })
+        <div class="row editDetails">
+            <div class="col-md-6"><a href="@Url.Action("Edit", "Works", new { id = item.WorkID })" class="smallButton text-center" style="float:right"role="button">Edit Entry</a></div>
+            <div class="col-md-6">
+                <a href="@Url.Action("Details", "Works", new { id = item.WorkID })" class="smallButton text-center" style="float:left"role="button">Entry Details</a></div>
+            </div>
 
         @*@*<div class="row">
                 <div class="col-md-2">
