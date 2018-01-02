@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2 class="lead">Index of Works</h2>
+<h1 class="lead">Index of Works</h1>
 
-<p>
-    @Html.ActionLink("Add Work", "Create")
+<p class="addAWork">
+    @Html.ActionLink("Add a Work", "Create")
 </p>
 
 <div>
@@ -31,10 +31,10 @@
                 <div class="col-md-2">
                     <h3>@Html.DisplayFor(modelItem => item.Date)</h3>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 titleDisplay">
                     <h3>@Html.DisplayFor(modelItem => item.WorkTitle)</h3>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 titleDisplay">
                     <h3>@Html.DisplayFor(modelItem => item.AuthorName) @Html.DisplayFor(modelItem => item.AuthorSurName)</h3>
                 </div>
             </div>

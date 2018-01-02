@@ -58,7 +58,7 @@ textarea {
 }
 .lead {
     font-family: 'Vollkorn SC', serif;
-    font-size: 24px;
+    font-size: 36px;
     text-align: center;
     color: black;
 }
@@ -123,18 +123,39 @@ a:link {
     text-align:center;
     color:black;
 }
+.titleDisplay h3::first-letter{
+    font-size: 125%;
+}
 .search {
     font-family: 'Vollkorn SC', serif;
-    font-size:18px;
+    font-size: 18px;
     background-color: #D7B468;
     border: 2px inset #802A1F;
 }
-.editDetails a{
+.editDetails a {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 16px;
+    color: #802A1F;
+}
+.editDetails {
+    font-family: 'Vollkorn SC', serif;
     font-size: 16px;
     margin-bottom: 15px;
     color: #802A1F;
+    text-align: center;
 }
-
+.addAWork {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #802A1F;
+    text-align: center;
+}
+.addAWork a{
+    font-family: 'Vollkorn SC', serif;
+    font-size: 24px;
+    color: #802A1F;
+}
 /*COLORS light brown #ECD9AF medium brown #D7B468 dark brown #471512*/
 /*FONT COLORS deep red brown #802A1F blue #4C5C84 yellow #F7BD38*/
 /*FONTS aevum= font-family: 'Fondamento', cursive; body= font-family: 'Vollkorn SC', serif;*/
