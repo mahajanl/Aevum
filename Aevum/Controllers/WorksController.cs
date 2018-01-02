@@ -40,6 +40,14 @@ namespace Aevum.Controllers
                 {
                     titles = titles.Where(title => title.Date.ToString().Contains(searchString));
                 }
+                else if (Search == "Description")
+                {
+                    titles = titles.Where(title => title.WorkDescription.Contains(searchString));
+                }
+                else if (Search == "Notes")
+                {
+                    titles = titles.Where(title => title.NotesOnWork.Contains(searchString));
+                }
             }
 
             return View(titles.ToList().OrderBy(o=>o.Date));

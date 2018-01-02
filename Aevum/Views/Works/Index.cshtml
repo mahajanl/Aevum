@@ -17,6 +17,8 @@
             @Html.RadioButton("Search", "Title", true)<span>Find by Title</span>
             @Html.RadioButton("Search", "Name")<span>Author</span>
             @Html.RadioButton("Search", "Date")<span>Date</span>
+            @Html.RadioButton("Search", "Description")<span>Keywords in Description</span>
+            @Html.RadioButton("Search", "Notes")<span>Keywords in Notes</span>
              @Html.TextBox("SearchString")
             <input type="submit" value="Search" />
         </p>
@@ -29,7 +31,7 @@
         <div class="container">
             <div class="work informationDisplay row">
                 <div class="col-md-2">
-                    <h3>@Html.DisplayFor(modelItem => item.Date)</h3>
+                    <h2>@Html.DisplayFor(modelItem => item.Date)</h2>
                 </div>
                 <div class="col-md-5 titleDisplay">
                     <h3>@Html.DisplayFor(modelItem => item.WorkTitle)</h3>
