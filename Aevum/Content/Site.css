@@ -40,9 +40,10 @@ textarea {
         background-color: #ECD9AF;
         color: #802A1F;
     }
-
+.aevum{
+background-image: url('AevumBG.png');
+}
 .heading {
-    background-image: url('AevumBG.png');
     padding: 15px 15px 15px 15px;
 }
 

@@ -1,35 +1,36 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-<div class="container-fluid heading">
-    <div class="container-fluid aevumContainer text-center">
-        <h1 class="headingAevum">Aevum</h1>
-        <p class="lead">A timeline of rhetorical works through the ages</p>
+<div class=" container-fluid aevum">
+    <div class="container-fluid heading">
+        <div class="container-fluid aevumContainer text-center">
+            <h1 class="headingAevum">Aevum</h1>
+            <p class="lead">A timeline of rhetorical works through the ages</p>
+        </div>
+        <p class="text-center"><a href="@Url.Action("Index","Works")" role="button" class="bigButton">The Timeline</a></p>
     </div>
-    <p class="text-center"><a href="@Url.Action("Index","Works")" role="button" class="bigButton">The Timeline</a></p>
-</div>
-@*<a class="button" href="~/Works/Index" role="button">Learn more</a>*@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6">
-            <p class="indexBody"><a href="@Url.Action("Create", "Works")" role="button" class="letterButton">A</a>dd a Work</p>
-            <p class="indexBlurb">Add a work to the timeline to see where it stands in the evolution of rhetorical texts.</p>
+    @*<a class="button" href="~/Works/Index" role="button">Learn more</a>*@
+    <div class="container-fluid aevumContainer">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="indexBody"><a href="@Url.Action("Create", "Works")" role="button" class="letterButton">A</a>dd a Work</p>
+                <p class="indexBlurb">Add a work to the timeline to see where it stands in the evolution of rhetorical texts.</p>
+            </div>
+            <div class="col-md-6">
+                <p class="indexBody"><a href="@Url.Action("Authors", "Works")" role="button" class="letterButton">A</a>uthors</p>
+                <p class="indexBlurb">All of the authors in the Aevum Timeline, with details for each of their works in the Timeline.</p>
+                <p></p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <p class="indexBody"><a href="@Url.Action("Create", "Works")" role="button" class="letterButton">A</a>uthors</p>
-            <p class="indexBlurb">All of the authors in the Aevum Timeline, searchable by Title, and Date.</p>
-            <p></p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <p class="indexBody"><a href="@Url.Action("Create", "Works")" role="button" class="letterButton">A</a>bout the Creators</p>
-            <p class="indexBlurb">The people behind the modern Aevum</p>
-        </div>
-        <div class="col-md-6">
-            <p class="indexBody"><a href="@Url.Action("Create", "Works")" role="button" class="letterButton">C</a>ontact Us</p>
-            <p class="indexBlurb">Let us know if you have questions or feedback on the project</p>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="indexBody"><a href="@Url.Action("About", "Home")" role="button" class="letterButton">A</a>bout the Creators</p>
+                <p class="indexBlurb">The people behind the modern Aevum</p>
+            </div>
+            <div class="col-md-6">
+                <p class="indexBody"><a href="@Url.Action("Contact", "Home")" role="button" class="letterButton">C</a>ontact Us</p>
+                <p class="indexBlurb">Let us know if you have questions or feedback on the project</p>
+            </div>
         </div>
     </div>
 </div>

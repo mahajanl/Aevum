@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Aevum.Models.Work>
+
+@{
+    ViewBag.Title = "Authors";
+}
+
+<h2>Authors</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<p class="search">
+    @Html.RadioButton("Search", "Name")<span>Author</span>
+    @Html.TextBox("SearchString")
+    <input type="submit" value="Search" />
+</p>
+
+@foreach (var item in Model)
+{
+<div>
+    @Html.DisplayFor(modelItem => item.AuthorName)
+</div>
+<div>
+    @Html.DisplayFor(modelItem => item.AuthorSurName)
+</div>
+<div>
+    @Html.DisplayFor(modelItem => item.WorkTitle)
+</div>
+    @Html.ActionLink("Edit", "Edit", new { id = item.WorkID }) @Html.ActionLink("Details", "Details", new { id = item.WorkID }) @Html.ActionLink("Delete", "Delete", new { id = item.WorkID })
+
+}
+

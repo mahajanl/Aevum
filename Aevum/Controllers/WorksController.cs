@@ -54,7 +54,20 @@ namespace Aevum.Controllers
             
         }
 
+        public ActionResult Authors(string Search, string searchString)
+        {
+            var authors = from author in db.Works
+                         select author;
 
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                if (Search == "Name")
+                {
+                    authors = authors.Where(author => author.AuthorName.Contains(searchString));
+                }
+            }
+            return View(authors.ToList().OrderBy(o => o.AuthorName));
+        }
 
         // GET: Works/Details/5
         public ActionResult Details(int? id)
